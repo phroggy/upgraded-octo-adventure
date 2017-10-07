@@ -1,10 +1,21 @@
 {
   "name": "upgraded-octo-adventure",
   "version": "0.0.0",
+  "description": "An app by Cam and Ellie",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phroggy/upgraded-octo-adventure.git"
+  },
+  "author": "Cam and Ellie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/phroggy/upgraded-octo-adventure/issues"
+  },
+  "homepage": "https://secret-dusk-50437.herokuapp.com",
   "dependencies": {
     "body-parser": "~1.18.2",
     "cookie-parser": "~1.4.3",
