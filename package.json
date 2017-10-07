@@ -1,22 +1,18 @@
 {
   "name": "upgraded-octo-adventure",
-  "version": "1.0.0",
-  "description": "An app by Cam and Ellie",
-  "main": "app.js",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/phroggy/upgraded-octo-adventure.git"
-  },
-  "author": "Cam and Ellie",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/phroggy/upgraded-octo-adventure/issues"
-  },
-  "homepage": "https://github.com/phroggy/upgraded-octo-adventure#readme",
   "dependencies": {
-    "express": "^4.16.1"
+    "body-parser": "~1.18.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.15.5",
+    "hbs": "~4.0.1",
+    "morgan": "~1.9.0",
+    "node-sass-middleware": "0.9.8",
+    "serve-favicon": "~2.4.5"
   }
 }
