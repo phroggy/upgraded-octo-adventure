@@ -1,9 +1,8 @@
 var express = require('express');
 var router = express.Router();
 var MongoClient = require('mongodb').MongoClient;
-var url = process.env.MONGODB_URI || "mongodb://localhost:27017/"
+var url = process.env.MONGODB_URI || "mongodb://localhost:27017/octo"
 
-const DB_NAME = "octo";
 const COLLECTION_NAME = "events";
 
 var tomorrow = new Date();
@@ -20,7 +19,7 @@ var db_seed = [
 console.log("Connecting to MongoDB at: " + url);
 MongoClient.connect(url, function(err, client) {
   if (err) throw err;
-  var dbo = client.db(DB_NAME);
+  var dbo = client.db();
   var collection = dbo.collection(COLLECTION_NAME);
   collection.deleteMany({}, function(err, res) {
     if (err) throw err;
@@ -42,7 +41,7 @@ MongoClient.connect(url, function(err, client) {
 /* GET events listing. */
 router.get('/', function(req, res, next) {
   MongoClient.connect(url, function(err, cilent) {
-    var dbo = cilent.db(DB_NAME);
+    var dbo = cilent.db();
     var collection = dbo.collection(COLLECTION_NAME);
     collection.find({}).toArray(function(err, docs) {
         res.json(docs);
@@ -95,7 +94,7 @@ function getEvents(date, req, res) {
   nextDate = new Date(date);
   nextDate.setDate(nextDate.getDate()+1);
   MongoClient.connect(url, function(err, cilent) {
-    var dbo = cilent.db(DB_NAME);
+    var dbo = cilent.db();
     var collection = dbo.collection(COLLECTION_NAME);
     console.log("Looking for events between " + date + " and " + nextDate);
     var query = { $and: [ {event_date: { $gte: date }}, {event_date: { $lt: nextDate }} ]};
