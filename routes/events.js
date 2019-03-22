@@ -22,11 +22,16 @@ MongoClient.connect(url, function(err, client) {
   if (err) throw err;
   var dbo = client.db(DB_NAME);
   var collection = dbo.collection(COLLECTION_NAME);
-  collection.drop(function(err, delOK) {
+  collection.deleteMany({}, function(err, res) {
     if (err) throw err;
-    if (delOK) console.log("Collection deleted");
+    if (res) console.log("Docs deleted: " + res.deletedCount);
     client.close();
   });
+  // collection.drop(function(err, delOK) {
+  //   if (err) throw err;
+  //   if (delOK) console.log("Collection deleted");
+  //   client.close();
+  // });
   collection.insertMany(db_seed, function(err, res) {
     if (err) throw err;
     console.log("Seeding DB with " + res.insertedCount + " objects");
