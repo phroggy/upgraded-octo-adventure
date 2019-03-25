@@ -11,7 +11,7 @@ Install MongoDB:
 ```bash
 $ brew install mongodb
 $ brew services start mongodb
-$ echo MONGODB_URI=mongodb://localhost:27017/ >> .env
+$ echo MONGODB_URI=mongodb://localhost:27017/octo >> .env
 ```
 
 Install dependencies:
