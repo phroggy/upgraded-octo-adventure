@@ -1,3 +1,5 @@
+<img src="https://user-images.githubusercontent.com/5770400/55282436-fe1e1300-5300-11e9-9020-f1aee24aff7e.png" width="300" height="300">
+
 # [upgraded-octo-adventure](https://secret-dusk-50437.herokuapp.com/)
 
 :octopus: :octopus: :octopus:
