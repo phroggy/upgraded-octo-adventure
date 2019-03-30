@@ -1,0 +1,50 @@
+$hoverable-entity-boundary: ".entity-container.links-out:not(.skip-hover)";
+$entity-shadow-placement: 0 2px 5px 0;
+$entity-animation-duration: 550ms;
+
+// helper mixin to assign animations
+@mixin animate-on-hover($selector: "&", $animation: null){
+  #{$selector} {
+    transition-property: transform;
+    transition-duration: 200ms;
+    transform: scale(1.0);
+  }
+  @if $selector == "&" {
+    &:hover{
+      @if $animation{ @include animation(#{$animation} $entity-animation-duration ease-out); }
+      @else{ transform: scale(1.02); }
+    }
+  }
+  @else{
+    &:hover #{$selector} {
+      @if $animation{ @include animation(#{$animation} $entity-animation-duration ease-out); }
+      @else{ transform: scale(1.02); }
+    }
+  }
+}
+
+@mixin remove-hover-animation($selector: "&"){
+  #{$selector} {
+    transition-property: none;
+    transform: none;
+  }
+  @if $selector == "&" {
+    &:hover{
+      animation: none;
+      transform: none;
+    }
+  }
+  @else{
+    &:hover #{$selector} {
+      animation: none;
+      transform: none;
+    }
+  }
+}
+
+@mixin entity-box-shadow{
+  .entity-box.thumb-border{
+    .aspect{ box-shadow: $entity-shadow-placement rgba(0, 0, 0, 0.55); }
+    &.subtle-hover .aspect{ box-shadow: $entity-shadow-placement rgba(0, 0, 0, 0.3); }
+  }
+}

@@ -1,0 +1,47 @@
+// clears on both top and bottom so that adjacent modules will appropriately
+// respect boundaries even with negative margins (like with sliders and stream)
+%double-clearfix{
+  &:before, &:after{
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+%clearfix{
+  &:after{
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// absolute positioning helpers
+%absolute-values{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+%absolute-full-width{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+// vertical and horizontal center alignment helper
+%center-transform{ // parent should be relatively positioned
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// tap helpers
+%webkit-tap{
+  // special for mobile Safari to avoid black square flash on tap
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}

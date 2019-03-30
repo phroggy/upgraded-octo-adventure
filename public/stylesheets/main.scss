@@ -1,0 +1,16 @@
+body {
+	padding: 50px;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+a {
+  color: #00B7FF;
+}
+
+
+// Base Styles
+@import 'global/constants';
+@import 'global/extends';
+@import 'global/entity_animations';
+@import 'application/fonts';

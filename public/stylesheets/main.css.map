@@ -1,0 +1,13 @@
+{
+	"version": 3,
+	"file": "main.css",
+	"sources": [
+		"main.scss",
+		"global/constants.scss",
+		"global/extends.scss",
+		"global/entity_animations.scss",
+		"application/fonts.scss"
+	],
+	"mappings": "AIAA,OAAO,CAAC,sDAAI,CJAZ,AAAA,IAAI,AAAC,CACJ,OAAO,CAAE,IAAK,CACb,IAAI,CAAE,kDAAmD,CACzD,WAAW,CAAE,qBAAsB,CACnC,KAAK,CAAE,IAAK,CACb,AAGD,AAAA,CAAC,AAAC,CACA,KAAK,CAAE,OAAQ,CAChB",
+	"names": []
+}

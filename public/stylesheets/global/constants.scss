@@ -1,0 +1,97 @@
+//global constants to standardize padding across site
+
+// Breakpoints
+$mid-low-breakpoint: 480px;
+$mid-high-breakpoint: 680px;
+$max-breakpoint: 960px;
+$wide-breakpoint: 1280px;
+$xlwide-breakpoint: 1600px;
+
+// breakpoints for mobile screen sizes
+$mobile-low-breakpoint: 320px;
+$mobile-mid-breakpoint: 360px;
+
+
+// Navigation
+// Breakpoints for chrome/nav elements
+$chrome-min-breakpoint: 600px;
+$chrome-mid-breakpoint: 768px;
+$chrome-max-breakpoint: 1025px;
+
+$footer-max-width: 1200px;
+
+// Navigation Constants
+//mobile constants
+$nav-toggle-el: 60px; // height of `.bar`
+$mobile-bar-height: 80px;
+$drawer-offset: 355px;
+$drawer-offset-mobile-min: 92%;
+$mobile-side-padding: 25px;
+
+// desktop constants
+$desktop-logo-bar: 62px;
+$desktop-cat-bar: 70px;
+$desktop-nav-height: $desktop-logo-bar + $desktop-cat-bar;
+$desktop-side-padding: 30px;
+$flyout-padding: 60px;
+
+
+// content sizing
+$content-mid-width: 960px;
+$content-max-width: 1400px;
+$content-min-height: 580px;
+
+// text and column max-widths
+$text-max-width: 700px;
+$column-max-width: $text-max-width;
+$text-wide-max-width: 800px;
+$column-wide-max-width: $text-wide-max-width;
+
+
+// Margins & Padding
+// side padding
+$padding-side-max: 40px;
+$padding-side-mid-high: 30px;
+$padding-side-mid-low: 20px;
+$padding-side-min: 20px;
+
+// top-bottom padding
+$padding-top-max: 50px;
+$padding-top-mid-high: $padding-side-mid-high;
+$padding-top-mid-low: $padding-side-mid-low;
+$padding-top-min: $padding-side-min;
+
+// slider gutters
+$min-item-margin: 4.6%;
+$mid-low-item-margin: 4%;
+$mid-high-item-margin: 3%;
+$max-item-margin: 2.7%;
+
+
+$padding-sets: (
+  null                   $padding-top-min       $padding-side-min,
+  $mid-low-breakpoint    $padding-top-mid-low   $padding-side-mid-low,
+  $mid-high-breakpoint   $padding-top-mid-high  $padding-side-mid-high,
+  $max-breakpoint        $padding-top-max       $padding-side-max
+);
+
+// z index
+$select2-els-index: 1051;
+$overlay-index: $select2-els-index + 1;
+$footer-index: $overlay-index + 1;
+$nav-index: $footer-index + 1;
+$universal-modal: $nav-index + 1;
+
+// Forms
+// inputs
+$input-height: 48px;
+$select-arrow-trans: 500ms;
+$select-arrow-offset: 14px;
+$select-arrow-width: 10px;
+$select-arrow-height: 7px;
+
+// For entities and character search scale effects
+$hover-scale: 1.03;
+
+// Modals
+$modal-max-width: 600px;
