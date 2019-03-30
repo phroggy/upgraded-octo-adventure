@@ -1,0 +1,7 @@
+{
+  "name": "Upgraded Octo Adventure",
+  "description": "Bowl traffic sux... preserve your sanity!",
+  "repository": "https://github.com/phroggy/upgraded-octo-adventure",
+  "logo": "https://node-js-sample.herokuapp.com/node.png",
+  "keywords": ["node", "express", "mongodb"]
+}
