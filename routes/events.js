@@ -16,6 +16,8 @@ var db_seed = [
   { _id: 2, name: 'Fake Event 2 (Tomorrow)', location: "Hollywood Bowl", event_date: tomorrow, created_at: new Date(), modified_at: new Date()}
 ];
 
+// TODO: replace all console.logs with real logger
+// https://github.com/phroggy/upgraded-octo-adventure/issues/9
 console.log("Connecting to MongoDB at: " + url);
 MongoClient.connect(url, function(err, client) {
   if (err) throw err;
@@ -26,11 +28,6 @@ MongoClient.connect(url, function(err, client) {
     if (res) console.log("Docs deleted: " + res.deletedCount);
     client.close();
   });
-  // collection.drop(function(err, delOK) {
-  //   if (err) throw err;
-  //   if (delOK) console.log("Collection deleted");
-  //   client.close();
-  // });
   collection.insertMany(db_seed, function(err, res) {
     if (err) throw err;
     console.log("Seeding DB with " + res.insertedCount + " objects");
@@ -52,7 +49,6 @@ router.get('/', function(req, res, next) {
 
 router.get('/today', function(req, res, next) {
   console.log("Today's events");
-  // returnDate(new Date(), req, res);
   var today = new Date();
   today.setHours(0);
   today.setMinutes(0);
@@ -63,14 +59,12 @@ router.get('/today', function(req, res, next) {
 
 router.get('/tomorrow', function(req, res, next) {
   console.log("Tomorrow's events");
-  // returnDate(tomorrow, req, res);
   getEvents(tomorrow, req, res);
 });
 
 router.get('/:date', function(req, res, next) {
   var date = req.params.date;
   console.log("Events for: " + date);
-  // returnDate(date, req, res);
   var local_date = new Date(date);
   console.log("Parsed date: " + local_date);
   local_date.setMinutes(local_date.getMinutes() + local_date.getTimezoneOffset());
@@ -78,16 +72,7 @@ router.get('/:date', function(req, res, next) {
   getEvents(local_date, req, res);
 });
 
-function returnDate(value, req, res) {
-  console.log("Parsing Date for value: " + value);
-  var date = new Date(value);
-  date.setHours(0);
-  date.setMinutes(0);
-  date.setSeconds(0);
-  date.setMilliseconds(0);
-  res.send(date);
-};
-
+/* get events from the DB for the date given and return in response */
 function getEvents(date, req, res) {
   console.log("Looking for events on " + date);
   var events;
