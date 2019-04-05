@@ -1,3 +1,5 @@
+<img src="https://user-images.githubusercontent.com/5770400/55282436-fe1e1300-5300-11e9-9020-f1aee24aff7e.png" width="300" height="300">
+
 [upgraded-octo-adventure](https://secret-dusk-50437.herokuapp.com/)
 ===================================================================
 
@@ -36,6 +38,8 @@ Open your browser at `http://localhost:3000/`
 
 Deployment
 ----------
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 Deploy to heroku from master:
 
