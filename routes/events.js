@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var MongoClient = require('mongodb').MongoClient;
-var url = process.env.MONGODB_URI || "mongodb://localhost:27017/octo"
+var url = process.env.MONGODB_URI || "mongodb://mongo:27017/octo"
 
 const COLLECTION_NAME = "events";
 

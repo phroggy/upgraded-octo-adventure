@@ -1,0 +1,19 @@
+version: '3'
+services:
+  web:
+    build: .
+    restart: always
+    ports:
+      - "3000:3000"
+    env_file: .env
+    depends_on:
+      - mongo
+    volumes:
+      - .:/usr/src/app # docker will use local source code to avoid rebuilding
+      - /usr/src/app/node_modules # trick to use image's node_modules instead of local's
+  mongo:
+    image: mongo:4
+    ports:
+      - "27017:27017"
+    volumes:
+      - /usr/local/var/mongodb:/data/db
