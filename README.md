@@ -8,12 +8,22 @@
 Getting Started
 ---------------
 
-### Prerequisites
+### The Docker Way (simplest)
+
+1. Install & set up Docker: https://github.com/phroggy/upgraded-octo-adventure/wiki/Full-Setup#docker
+2. Start the app
+
+    $ docker-compose up
+
+3. Open your browser at `http://localhost:3000/`
+
+### The Non-Docker Way
+#### Prerequisites
 Install MongoDB:
 ```bash
 $ brew install mongodb
 $ brew services start mongodb
-$ echo MONGODB_URI=mongodb://localhost:27017/octo >> .env
+$ echo MONGODB_URI=mongodb://mongo:27017/octo >> .env
 ```
 
 Install dependencies:
@@ -22,7 +32,7 @@ Install dependencies:
 $ npm install
 ```
 
-### Run Locally
+#### Run Locally
 
 ```bash
 $ npm start
@@ -59,6 +69,7 @@ Built With
 * [Node](https://nodejs.org/en/)
 * [Express](https://expressjs.com/)
 * [MongoDB](https://docs.mongodb.com/)
+* [Docker](https://www.docker.com/)
 
 Authors
 -------

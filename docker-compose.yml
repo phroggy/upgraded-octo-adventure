@@ -8,6 +8,9 @@ services:
     env_file: .env
     depends_on:
       - mongo
+    volumes:
+      - .:/usr/src/app # docker will use local source code to avoid rebuilding
+      - /usr/src/app/node_modules # trick to use image's node_modules instead of local's
   mongo:
     image: mongo:4
     ports:
