@@ -1,0 +1,19 @@
+.home {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  text-align: center;
+  .logo-container {
+    max-width: 20%;
+    margin: 0 auto;
+    img {
+      width: 100%;
+    }
+  }
+  section.api {
+    text-align: left;
+  }
+}
+
+a {
+  color: #00B7FF;
+}

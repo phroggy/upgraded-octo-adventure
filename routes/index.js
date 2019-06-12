@@ -3,7 +3,12 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'a hollywood bowl concert tonight' });
+  var context = {
+    title: 'a hollywood bowl concert tonight',
+    class: 'home'
+  };
+
+  res.render('index', context);
 });
 
 module.exports = router;

@@ -1,8 +1,3 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
-
-a {
-  color: #00B7FF; }
+.home{padding:50px;font:14px "Lucida Grande", Helvetica, Arial, sans-serif;text-align:center}.home .logo-container{max-width:20%;margin:0 auto}.home .logo-container img{width:100%}.home section.api{text-align:left}a{color:#00B7FF}
 
 /*# sourceMappingURL=style.css.map */
