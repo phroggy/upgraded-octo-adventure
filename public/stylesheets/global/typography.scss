@@ -4,5 +4,7 @@
 body {
   font-family: 'Overpass', sans-serif;
   color: $body-text-color;
-  a { color: $link-color; }
+  a { 
+    color: $link-color;
+  }
 }
