@@ -4,8 +4,9 @@ const router = express.Router();
 /* GET home page. */
 router.get('/', function(req, res, next) {
   const context = {
-    title: 'a hollywood bowl concert tonight',
-    class: 'home'
+    title: 'Hollywood Bowl Traffic Sux',
+    class: 'home',
+    year: new Date().getFullYear()
   };
 
   res.render('index', context);
