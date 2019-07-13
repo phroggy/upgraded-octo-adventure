@@ -1,0 +1,21 @@
+// Color variables
+$color-deep-sky-blue: #00B7FF;
+$color-aubergine: #231F20; // Text color on official Hollywood Bowl site
+$color-sapphire: #112e72; // BG color on official Hollywood Bowl site
+$color-white-smoke: #f8f8f8; // Dark theme text color on official Hollywood Bowl site
+$color-white: #fff;
+$color-celeste: #d0d0ce; // Gray border color on official Hollywood Bowl site
+$color-turquoise: #50feb1;
+
+// Theme Colors
+$bg-color-primary: $color-white-smoke;
+$bg-color-secondary: $color-celeste;
+$accent-color: $color-turquoise;
+
+// Typography Colors
+$body-text-color: $color-aubergine;
+$light-text-color: $bg-color-primary;
+$link-color: darken($color-turquoise, 25%);
+
+// Borders
+$box-shadow-default: 0 1px 3px -2px #9098A9;

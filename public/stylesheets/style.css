@@ -1,8 +1,3 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
-
-a {
-  color: #00B7FF; }
+@import url("https://fonts.googleapis.com/css?family=Overpass&display=swap");body{font-size:100%;font-family:'Overpass', sans-serif;color:#231F20}body a{color:#01cd73}a.button:link,a.button:visited{border:3px solid #50feb1;padding:10px 15px;text-align:center;text-decoration:none;display:block;max-width:200px;margin:0 auto}a.button:hover,a.button:active{background-color:#01e781;color:#fff}.home{margin:0}.home header:after,.home footer:before,.home section.api:before{content:'';display:block;position:absolute;width:98%;height:1px;background:#d0d0ce;left:0;right:0;top:0;margin:0 auto}.home header{padding:0.5em 1em;position:relative}.home header:after{top:auto}.home header h1{text-transform:uppercase;font-size:1rem;letter-spacing:1px}.home footer{padding:10px;position:relative;text-align:center}.home section{position:relative}.home section.hero{text-align:center;padding:50px}.home section.hero h2{font-size:2rem;margin-top:0}.home section.api{display:flex;flex-wrap:wrap;padding:10px 25px}.home section.api h3,.home section.api p{text-align:center}.home section.api h3{padding-left:unset;font-size:1.2rem;letter-spacing:1px;text-transform:uppercase}.home section.api li{color:#b7b7b4}.home .logo-container{margin:20px auto}.home .logo-container .img-wrapper{height:150px;width:150px;border:3px solid #50feb1;border-radius:50%;background-color:#fff}.home .logo-container .img-wrapper img{width:100%}@media screen and (min-width: 768px){.home section.hero{min-height:50vh;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;flex-direction:column}.home section.hero h2{flex:0 0 100%}.home section.api{flex-wrap:nowrap}.home section.api h3,.home section.api p{text-align:left;padding-left:40px}.home .logo-container{margin:20px 0}}
 
 /*# sourceMappingURL=style.css.map */

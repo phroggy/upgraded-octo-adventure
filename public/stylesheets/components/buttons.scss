@@ -1,0 +1,19 @@
+@import 'global/style_elements';
+
+$button-border-color: $accent-color !default;
+
+a.button {
+  &:link, &:visited {
+    border: 3px solid $button-border-color;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+  &:hover, &:active {
+    background-color: darken($button-border-color, 20%);
+    color: $color-white;
+  }
+}

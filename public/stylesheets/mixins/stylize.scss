@@ -1,0 +1,14 @@
+@import 'global/style_elements';
+
+@mixin section-divider {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 98%;
+  height: 1px;
+  background: $bg-color-secondary;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: 0 auto;
+}

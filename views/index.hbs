@@ -1,9 +1,31 @@
-<p>Hello, is there {{title}}???</p>
+<header>
+  <h1>{{title}}</h1>
+</header>
 
-<h3>API Examples</h3>
-<ul>
-  <li><a href="/events">/events</a> #lists all events</li>
-  <li><a href="/events/today">/events/today</a> #lists events today</li>
-  <li><a href="/events/tomorrow">/events/tomorrow</a> #lists events tomorrow</li>
-  <li><a href="/events/2019-01-01">/events/:date</a> #lists events on date specified (in yyyy-MM-dd format)</li>
-</ul>
+<section class="hero">
+  <h2>Is there a Hollywood Bowl concert tonight?</h2>
+  <a href="/events/today" target="_blank" class="button">Find Out &rarr;</a>
+</section>
+
+<section class="api">
+  <div class="logo-container">
+    <div class="img-wrapper">
+      <img src="images/upgraded-octo-adventure-logo-v1.png">
+    </div>
+  </div>
+  <div class="api-container">
+    <h3>API Examples</h3>
+    <ul>
+      <li><a href="/events">/events</a> #lists all events</li>
+      <li><a href="/events/today">/events/today</a> #lists events today</li>
+      <li><a href="/events/tomorrow">/events/tomorrow</a> #lists events tomorrow</li>
+      <li><a href="/events/2019-01-01">/events/:date</a> #lists events on date specified (in yyyy-MM-dd format)</li>
+    </ul>
+    <p>Powered by <a href="https://github.com/phroggy/upgraded-octo-adventure" target="_blank">Upgraded Octo Adventure</a></p>
+  </div>
+</section>
+<footer>
+  <small>
+    &copy; {{year}} <a href="https://github.com/phroggy" target="_blank">Cam</a> and <a href="https://github.com/elliehoshi" target="_blank">Ellie</a>
+  </small>
+</footer>
