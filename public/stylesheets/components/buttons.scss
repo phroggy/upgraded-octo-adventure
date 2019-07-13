@@ -8,7 +8,9 @@ a.button {
     padding: 10px 15px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: block;
+    max-width: 200px;
+    margin: 0 auto;
   }
   &:hover, &:active {
     background-color: darken($button-border-color, 20%);
